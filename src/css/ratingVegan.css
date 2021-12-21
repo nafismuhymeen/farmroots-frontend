@@ -1,0 +1,115 @@
+/* Rating */
+
+.rating-box {
+  position: relative;
+  vertical-align: middle;
+  font-size: 2rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #aaaaaa;
+  margin-top: 0.25rem;
+}
+
+.rating-box::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+.rating {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  font-family: FontAwesome;
+  overflow: hidden;
+  color: #ffc702;
+}
+
+.rating::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+/* Grocery Rating */
+
+.grocery-rating-box {
+  position: relative;
+  vertical-align: middle;
+  font-size: 2rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #505050;
+  margin-top: 0.25rem;
+}
+
+.grocery-rating-box::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+.grocery-rating {
+  position: absolute;
+  left: 0;
+  font-family: FontAwesome;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffc702;
+}
+
+.grocery-rating::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+/* Grocery Reviews Rating */
+
+.grocery-reviews-rating-box {
+  position: relative;
+  vertical-align: middle;
+  font-size: 2rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #505050;
+  margin-top: 0.25rem;
+}
+
+.grocery-reviews-rating-box::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+.grocery-reviews-rating-stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: FontAwesome;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffc702;
+}
+
+.grocery-reviews-rating-stars::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+/* Vegan */
+
+.vegan {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 0.1rem #aaaaaa solid;
+  border-radius: 5rem;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 4rem;
+  justify-content: center;
+}
+
+.vegan-text {
+  color: #888888;
+  font-size: 1.7rem;
+  margin-left: 1rem;
+}
+
+.vegan-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  object-fit: contain;
+}

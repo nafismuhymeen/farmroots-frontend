@@ -1,0 +1,365 @@
+/* Career Screen */
+
+.career-top-image {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover;
+}
+
+/* Life at farmroots */
+
+.career-life-at-farmroots {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50rem;
+}
+
+.career-life-at-farmroots-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.career-life-at-farmroots-content {
+  width: 50%;
+  padding: 10rem;
+}
+
+.career-life-at-farmroots-heading {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.career-life-at-farmroots-text {
+  font-size: 2rem;
+}
+
+/* Work Life Slogan */
+
+.career-work-life-slogan {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #ffe4c4;
+  color: #000;
+}
+
+/* Job Openings */
+
+.career-job-openings {
+  padding: 2vw 7vw 5vw;
+}
+
+.career-job-openings-heading {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.career-job-openings-job {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  background-color: #f3f3f3;
+  padding: 4rem;
+  border-bottom: 0.1rem #888 solid;
+  cursor: pointer;
+  width: 86vw;
+}
+
+.career-job-openings-job-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.career-job-openings-job-location {
+  font-size: 2rem;
+}
+
+.career-job-openings-job-description {
+  padding-top: 2rem;
+  display: none;
+}
+
+.career-job-openings-job-description-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 0.7rem;
+}
+
+.career-job-openings-job-description-list {
+  padding-left: 2rem;
+}
+
+.career-job-openings-job-description-list-item {
+  margin-bottom: 0.5rem;
+}
+
+.career-job-openings-job:hover .career-job-openings-job-description {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Publications Slogan */
+
+.career-publication-slogan {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #374bff;
+  color: #ffffff;
+}
+
+/* Publications */
+
+.career-publications {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50rem;
+}
+
+.career-publications-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.career-publications-content {
+  width: 50%;
+  padding: 10rem;
+}
+
+.career-publications-heading {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.career-publications-text {
+  font-size: 2rem;
+}
+
+/* my css */
+
+
+/* .viewAllContainer {
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+} */
+.greenbtn {
+  background-color: #00632c;
+  color: #f1f1f1;
+}
+.biggreenbtn {
+  display: grid;
+}
+
+.centerCard {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.cardColor1 {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  text-align: inherit;
+  min-height: 400px;
+  padding: 50px;
+}
+.cardColor2 {
+  background-color: #2b2d47;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: inherit;
+  min-height: 400px;
+}
+
+.gridstyle {
+  display: grid;
+}
+
+.fottercardcolor a {
+  color: #fff;
+  font-size: 12px;
+}
+.social-media .btn-primary {
+  background-color: #2b3030 !important ;
+  border-color: #2b3030 !important ;
+}
+.home-partners {
+  display: flex;
+  flex-direction: column;
+  background-color: #40465f;
+
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+.home-partners-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+.home-partners-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imagesliderheight {
+  height: 20rem;
+}
+.widthofslider {
+  width: 100%;
+}
+
+.colorwhite {
+  color: #fff;
+}
+
+.searchWidth {
+  max-width: 190px;
+}
+
+.categoriesCardWidth {
+  width: 15rem;
+  background-color: #1a1a1a;
+}
+.selectstyle {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: transparent;
+  color: #fff;
+}
+
+.searchstylecontainer {
+  margin-left: 10px;
+}
+
+.sortbystyle {
+  margin-top: 8px;
+}
+
+@media (max-width: 575px) {
+  .menustyle {
+    display: grid;
+    /* justify-content: center; */
+    margin-left: 8rem;
+    width: -moz-available;
+  }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+  .categoriesCardWidth {
+    width: 12rem;
+  }
+}
+
+.menutitle {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+
+
+.stickytopheader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+.textstyleLife2 {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.divider1 {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #ffe4c4;
+}
+.divider2 {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #374bff;
+  color: #f1f1f1;
+}
+
+.divider11 {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #1e434e;
+  color: #fff;
+}
+.divider12 {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #464646;
+  color: #fff;
+}
+.divider122 {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #832a01;
+  color: #fff;
+}
+
+.jobopening {
+  margin-left: 75px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

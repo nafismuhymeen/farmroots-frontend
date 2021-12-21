@@ -1,0 +1,37 @@
+/* Exports Screen */
+
+.exports-top-image{
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+}
+
+/* Exports Content */
+
+.exports{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50rem;
+}
+
+.exports-image{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exports-content{
+    width: 50%;
+    padding: 10rem;
+}
+
+.exports-name{
+    font-size: 3.6rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.exports-text{
+    font-size: 2rem;
+}

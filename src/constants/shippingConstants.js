@@ -1,0 +1,2 @@
+export const SHIPPING_SAVE = 'SHIPPING_SAVE';
+export const SHIPPING_DELETE = 'SHIPPING_DELETE';

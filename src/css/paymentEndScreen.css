@@ -1,0 +1,53 @@
+/* Success */
+#payment-success {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#payment-success button {
+  background-color: #00632c;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Cancel */
+#payment-cancel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#payment-cancel button {
+  background-color: #00632c;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Fail */
+#payment-fail {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#payment-fail button {
+  background-color: #00632c;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}

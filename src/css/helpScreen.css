@@ -1,0 +1,18 @@
+/* Help and Legal */
+
+.help-content{
+    padding: 10rem;
+    padding-top: 7rem;
+    padding-right: 15rem;
+    padding-bottom: 5rem;
+}
+
+.help-heading{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.help-text{
+    font-size: 2rem;
+}

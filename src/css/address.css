@@ -1,0 +1,304 @@
+/* Address Component */
+
+.address-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000098;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.address-modal.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000098;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.address-edit-modal.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address {
+  position: relative;
+  top: 8%;
+  left: 25%;
+  background-color: #ffffff;
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-close-button {
+  background-color: transparent;
+  border: none;
+  padding: 0rem;
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.address-close-button:hover,
+.address-close-button:active,
+.address-close-button:focus {
+  background-color: transparent !important;
+}
+
+.address-heading {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+/* Address Form */
+
+.address-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2.5rem;
+}
+
+.address-form-element {
+  width: 48%;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.address-form-label {
+  font-size: 1.8rem;
+}
+
+.address-form-input {
+  width: 100%;
+  height: 4rem;
+  border-color: #b6b6b6;
+  outline: none;
+}
+
+.address-form-input::placeholder {
+  color: #aaaaaa;
+}
+
+.address-form-select {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  border-color: #b6b6b6;
+  padding-left: 0.5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.address-form-type-button {
+  width: 28%;
+  height: 4rem;
+  margin-right: 1.5rem;
+  font-size: 1.7rem;
+  border-radius: 3rem;
+  background-color: transparent;
+  border-color: #b6b6b6;
+  color: #000000;
+}
+
+.address-form-type-button:hover,
+.address-form-type-button:active,
+.address-form-type-button:focus {
+  background-color: #00632c !important;
+  border-color: #00632c !important;
+}
+
+.address-form-submit {
+  background-color: #00632c;
+  border-color: #00632c;
+  width: 50%;
+  height: 5rem;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.address-form-submit:hover,
+.address-form-submit:active,
+.address-form-submit:focus {
+  background-color: #004b22 !important;
+  border-color: #004b22 !important;
+}
+
+/* Address Area Dropdown */
+
+.address-area-dropdown {
+  position: absolute;
+  width: 44.3%;
+  background-color: #ffffff;
+  border: 0.1rem #cccccc solid;
+  border-radius: 0.8rem;
+  margin-top: 7rem;
+  overflow: hidden;
+  display: none;
+}
+
+.address-area-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-district-dropdown {
+  position: absolute;
+  width: 44.3%;
+  background-color: #ffffff;
+  border: 0.1rem #cccccc solid;
+  border-radius: 0.8rem;
+  margin-top: 7rem;
+  overflow: hidden;
+  display: none;
+}
+
+.address-district-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-division-dropdown {
+  position: absolute;
+  width: 44.3%;
+  background-color: #ffffff;
+  border: 0.1rem #cccccc solid;
+  border-radius: 0.8rem;
+  margin-top: 7rem;
+  overflow: hidden;
+  display: none;
+}
+
+.address-division-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-area-edit-dropdown {
+  position: absolute;
+  width: 44.3%;
+  background-color: #ffffff;
+  border: 0.1rem #cccccc solid;
+  border-radius: 0.8rem;
+  margin-top: 7rem;
+  overflow: hidden;
+  display: none;
+}
+
+.address-area-edit-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-district-edit-dropdown {
+  position: absolute;
+  width: 44.3%;
+  background-color: #ffffff;
+  border: 0.1rem #cccccc solid;
+  border-radius: 0.8rem;
+  margin-top: 7rem;
+  overflow: hidden;
+  display: none;
+}
+
+.address-district-edit-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-division-edit-dropdown {
+  position: absolute;
+  width: 44.3%;
+  background-color: #ffffff;
+  border: 0.1rem #cccccc solid;
+  border-radius: 0.8rem;
+  margin-top: 7rem;
+  overflow: hidden;
+  display: none;
+}
+
+.address-division-edit-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-dropdown-text {
+  font-size: 1.7rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1rem;
+  color: #666666;
+}
+
+.address-dropdown-button {
+  font-size: 1.7rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border: none;
+  background-color: #ffffff;
+  color: #666666;
+}
+
+.address-dropdown-button:hover,
+.address-dropdown-button:active,
+.address-dropdown-button:focus {
+  background-color: #f6f6f6 !important;
+  color: #666666 !important;
+}
+
+.asterisk-mandatory {
+  color: #d13426;
+}
+
+@media screen and (max-width: 575px) {
+  .address {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    background-color: #ffffff;
+    left: 0%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .address-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+  }
+  .address-form-element {
+    width: 48%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .address-form-label {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,398 @@
+/* Login */
+
+.grocery-login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000bb;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.grocery-login-modal.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.grocery-login {
+  position: relative;
+  top: 10%;
+  left: 37.5%;
+  background-color: #111111;
+  padding: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.5rem;
+  width: 25%;
+}
+
+.grocery-login-close-button {
+  background: transparent;
+  border: none;
+  padding: 0rem;
+  margin-right: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.grocery-login-close-button:hover,
+.grocery-login-close-button:active,
+.grocery-login-close-button:focus {
+  background: transparent !important;
+}
+
+.grocery-login-login-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+  color: #ffffff;
+}
+
+.grocery-login-signup-text {
+  margin-bottom: 1.5rem;
+  color: #aaaaaa;
+}
+
+.grocery-login-signup-button {
+  background-color: transparent;
+  color: #00823a;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.grocery-login-signup-button:hover,
+.grocery-login-signup-button:active,
+.grocery-login-signup-button:focus {
+  background-color: transparent !important;
+  color: #00632c !important;
+}
+
+.grocery-login-horizontal-line {
+  display: flex;
+  flex-direction: row;
+  color: #aaaaaa;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.grocery-login-horizontal-line::before,
+.grocery-login-horizontal-line::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 0.1rem #aaaaaa solid;
+  margin: auto;
+}
+
+.grocery-login-email-text {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.grocery-login-email-input {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  border-color: #aaaaaa;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.grocery-login-email-input:hover,
+.grocery-login-email-input:active,
+.grocery-login-email-input:focus {
+  border-color: #aaaaaa !important;
+  outline: none !important;
+}
+
+.grocery-login-password-text {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.grocery-login-forget-password {
+  margin-right: 1rem;
+  margin-bottom: 0.2rem;
+  font-size: 1.4rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #aaaaaa;
+}
+
+.grocery-login-forget-password:hover,
+.grocery-login-forget-password:active,
+.grocery-login-forget-password:focus {
+  background-color: transparent !important;
+  border-color: none !important;
+  color: #aaaaaa !important;
+}
+
+.grocery-login-password-input {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  width: -webkit-fill-available;
+  background-color: transparent;
+  border-color: #aaaaaa;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border-right: transparent;
+  color: #ffffff;
+}
+
+.grocery-login-password-input:hover,
+.grocery-login-password-input:active,
+.grocery-login-password-input:focus {
+  border-color: #aaaaaa !important;
+  outline: none !important;
+}
+
+.grocery-login-password-show-button {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: transparent;
+  border-color: #aaaaaa;
+  color: #aaaaaa;
+  border-left: transparent;
+}
+
+.grocery-login-password-show-button:hover,
+.grocery-login-password-show-button:active,
+.grocery-login-password-show-button:focus {
+  background-color: transparent !important;
+  border-color: #aaaaaa !important;
+  color: #aaaaaa !important;
+  border-left: transparent !important;
+}
+
+.grocery-login-submit {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-radius: 2rem;
+  background-color: #00632c;
+  border-color: #00632c;
+  color: #ffffff;
+}
+
+.grocery-login-submit:hover,
+.grocery-login-submit:active,
+.grocery-login-submit:focus {
+  background-color: #004b22 !important;
+  border-color: #004b22 !important;
+}
+
+/* Register */
+
+.grocery-register-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000bb;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.grocery-register-modal.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.grocery-register {
+  position: relative;
+  top: 3.5%;
+  left: 37.5%;
+  background-color: #111111;
+  padding: 1rem;
+  width: 30%;
+}
+
+.grocery-register-close-button {
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  margin-top: -1rem;
+  margin-right: -0.5rem;
+}
+
+.grocery-register-close-button:hover,
+.grocery-register-close-button:active,
+.grocery-register-close-button:focus {
+  background: transparent !important;
+}
+
+.grocery-register-register-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: -1rem;
+  margin-bottom: 0rem;
+  color: #ffffff;
+}
+
+.grocery-register-login-text {
+  margin-bottom: 0.9rem;
+  color: #aaaaaa;
+}
+
+.grocery-register-login-button {
+  background-color: transparent;
+  color: #00823a;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.grocery-register-login-button:hover,
+.grocery-register-login-button:active,
+.grocery-register-login-button:focus {
+  background-color: transparent !important;
+  color: #00632c !important;
+}
+
+.grocery-register-horizontal-line {
+  display: flex;
+  flex-direction: row;
+  color: #aaaaaa;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.grocery-register-horizontal-line::before,
+.grocery-register-horizontal-line::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 0.1rem #aaaaaa solid;
+  margin: auto;
+}
+
+.grocery-register-email-text {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.grocery-register-email-input {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.4rem;
+  border-color: #aaaaaa;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.grocery-register-email-input:hover,
+.grocery-register-email-input:active,
+.grocery-register-email-input:focus {
+  border-color: #aaaaaa !important;
+  outline: none !important;
+}
+
+.grocery-register-country-input {
+  margin-left: 1rem;
+  margin-bottom: 1.4rem;
+  width: -webkit-fill-available;
+  border-color: #aaaaaa;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.grocery-register-mobile-text {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.grocery-register-mobile-input {
+  margin-right: 1rem;
+  margin-bottom: 1.4rem;
+  border-color: #aaaaaa;
+  width: -webkit-fill-available;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.grocery-register-password-text {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.grocery-register-password-input {
+  margin-left: 1rem;
+  margin-bottom: 1.4rem;
+  width: -webkit-fill-available;
+  border-color: #aaaaaa;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border-right: transparent;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.grocery-register-password-input:hover,
+.grocery-register-password-input:active,
+.grocery-register-password-input:focus {
+  border-color: #aaaaaa !important;
+  outline: none !important;
+}
+
+.grocery-register-password-show-button {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  margin-bottom: 1.4rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: transparent;
+  border-color: #aaaaaa;
+  color: #aaaaaa;
+  border-left: transparent;
+}
+
+.grocery-register-password-show-button:hover,
+.grocery-register-password-show-button:active,
+.grocery-register-password-show-button:focus {
+  background-color: transparent !important;
+  border-color: #aaaaaa !important;
+  color: #aaaaaa !important;
+  border-left: transparent !important;
+}
+
+.grocery-register-submit {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-radius: 2rem;
+  background-color: #00632c;
+  border-color: #00632c;
+  color: #ffffff;
+}
+
+.grocery-register-submit:hover,
+.grocery-register-submit:active,
+.grocery-register-submit:focus {
+  background-color: #004b22 !important;
+  border-color: #004b22 !important;
+}

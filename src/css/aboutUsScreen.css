@@ -1,0 +1,470 @@
+/* About Us Screen */
+
+.about-us-top-image {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover;
+}
+
+/* About farmroots */
+
+.about-us-about-farmroots {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50rem;
+}
+
+.about-us-about-farmroots-image {
+  /* width: 50%; */
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-about-farmroots-content {
+  /* width: 50%; */
+  padding: 1rem 1rem 1rem 12rem;
+}
+
+.about-us-about-farmroots-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.about-us-about-farmroots-text {
+  font-size: 2rem;
+}
+
+/* Vision Slogan */
+
+.about-us-vision-slogan {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #1e434e;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Vision */
+
+.about-us-vision {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50rem;
+}
+
+.about-us-vision-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-vision-content {
+  width: 50%;
+  padding: 10rem;
+}
+
+.about-us-vision-heading {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.about-us-vision-text {
+  font-size: 2rem;
+}
+
+/* Management Slogan */
+
+.about-us-management-slogan {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #464646;
+  color: #ffffff;
+}
+
+/* Management */
+
+.about-us-management {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50rem;
+}
+
+.about-us-management-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-management-content {
+  width: 50%;
+  padding: 10rem;
+}
+
+.about-us-management-name {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.about-us-management-position {
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+.about-us-management-text {
+  font-size: 2rem;
+}
+
+/* Factory Slogan */
+
+.about-us-factory-slogan {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #832a01;
+  color: #ffffff;
+}
+
+/* Factory */
+
+.about-us-factory {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50rem;
+}
+
+.about-us-factory-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-factory-content {
+  width: 50%;
+  padding: 10rem;
+}
+
+.about-us-factory-heading {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.about-us-factory-text {
+  font-size: 2rem;
+}
+
+.about-us-factory-video {
+  width: 100%;
+  height: 50rem;
+}
+
+/* .viewAllContainer {
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+} */
+.greenbtn {
+  background-color: #00632c;
+  color: #f1f1f1;
+}
+.biggreenbtn {
+  display: grid;
+}
+
+.centerCard {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.cardColor1 {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  text-align: inherit;
+  min-height: 400px;
+  padding: 50px;
+}
+.cardColor2 {
+  background-color: #2b2d47;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: inherit;
+  min-height: 400px;
+}
+
+.gridstyle {
+  display: grid;
+}
+
+.fottercardcolor a {
+  color: #fff;
+  font-size: 12px;
+}
+.social-media .btn-primary {
+  background-color: #2b3030 !important ;
+  border-color: #2b3030 !important ;
+}
+.home-partners {
+  display: flex;
+  flex-direction: column;
+  background-color: #40465f;
+
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+.home-partners-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+.home-partners-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imagesliderheight {
+  height: 20rem;
+}
+.widthofslider {
+  width: 100%;
+}
+
+.colorwhite {
+  color: #fff;
+}
+
+.searchWidth {
+  max-width: 190px;
+}
+
+.categoriesCardWidth {
+  width: 15rem;
+  background-color: #1a1a1a;
+}
+.selectstyle {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: transparent;
+  color: #fff;
+}
+
+.searchstylecontainer {
+  margin-left: 10px;
+}
+
+.sortbystyle {
+  margin-top: 8px;
+}
+
+@media (max-width: 575px) {
+  .menustyle {
+    display: grid;
+    /* justify-content: center; */
+    margin-left: 8rem;
+    width: -moz-available;
+  }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+  .categoriesCardWidth {
+    width: 12rem;
+  }
+}
+
+.menutitle {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.stickytopheader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.textstyleLife {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 1%;
+  /* margin-bottom: 3%; */
+  font-weight: 600;
+  font-size: 1.6vw;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.textstyleLifePosition {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 1%;
+  /* margin-bottom: 3%; */
+  font-weight: 600;
+  font-size: 1.2vw;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.textstyleLife2 {
+  font-weight: 500;
+  font-size: 1.2vw;
+}
+
+.divider1 {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #ffe4c4;
+}
+.divider11 {
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #1e434e;
+  color: #fff;
+  text-align: center;
+}
+.divider12 {
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #464646;
+  color: #fff;
+}
+.divider122 {
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #832a01;
+  color: #fff;
+}
+.divider2 {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #374bff;
+  color: #f1f1f1;
+}
+
+.jobopening {
+  margin-left: 75px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.textstyleLifeRight1 {
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+
+.textstyleLifeRight2 {
+}
+.centerTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.width100cent {
+  width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  .textstyleLife2 {
+    font-weight: 500;
+    font-size: 2.1rem;
+  }
+  .textstyleLife {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .textstyleLife2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .textstyleLife {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .textstyleLife {
+    display: grid;
+    /* margin-top: 3%; */
+    margin-bottom: 2%;
+    font-weight: 600;
+    font-size: 2rem;
+    justify-content: center;
+  }
+  .centerTextContainer {
+    min-height: 60vw;
+  }
+  .textstyleLife2 {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

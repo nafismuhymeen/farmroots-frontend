@@ -1,0 +1,93 @@
+/* Grocery Detailed Info */
+
+.grocery-detailed-info {
+  width: 82.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.grocery-detailed-info-description-heading {
+  margin-top: 3rem;
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.grocery-detailed-info-description {
+  font-size: 2.1rem;
+  color: #ffffff;
+  margin-top: 2rem;
+  word-spacing: 0.1rem;
+  line-height: 2.8rem;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.grocery-detailed-info-nutrition-heading {
+  margin-top: 3.5rem;
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.grocery-detailed-info-table,
+.grocery-detailed-info-th,
+.grocery-detailed-info-td {
+  border: 0.1rem #aaaaaa solid;
+  border-collapse: collapse;
+}
+
+.grocery-detailed-info-table {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.grocery-detailed-info-th {
+  padding: 2rem;
+  padding-right: 1.5rem;
+  text-align: right;
+  font-size: 2rem;
+  color: #ffffff;
+  width: 20%;
+  text-transform: uppercase;
+}
+
+.grocery-detailed-info-td {
+  padding: 2rem;
+  padding-left: 1.5rem;
+  font-size: 2rem;
+  color: #999999;
+}
+
+@media screen and (max-width: 600px) {
+  .grocery-detailed-info-th {
+    padding: 1rem;
+    padding-right: 1rem;
+    text-align: right;
+    font-size: 1.5rem;
+    color: #ffffff;
+    width: 20%;
+    text-transform: uppercase;
+  }
+
+  .grocery-detailed-info-td {
+    padding: 2rem;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    color: #999999;
+  }
+  .grocery-detailed-info-description {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    word-spacing: 0.1rem;
+    line-height: 1.8rem;
+    width: 100%;
+    white-space: pre-wrap;
+  }
+}

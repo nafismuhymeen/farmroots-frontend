@@ -1,0 +1,119 @@
+/* Address Screen */
+
+.user-address {
+  flex: 0 1 80%;
+  padding-left: 5rem;
+  padding-right: 1rem;
+}
+
+.user-address-heading {
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+
+.user-address-content {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: -1.5rem;
+}
+
+.user-add-address-button {
+  width: auto;
+  height: 13rem;
+  border-color: #c4c4c4;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #00632c;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  margin-right: 4rem;
+}
+
+.user-add-address-button:hover,
+.user-add-address-button:active,
+.user-add-address-button:focus {
+  background-color: transparent !important;
+  border-color: #a1a1a1 !important;
+  color: #00632c !important;
+}
+
+.user-address-box {
+  width: auto;
+  min-height: 13rem;
+  border: 0.1rem #c4c4c4 solid;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  padding-top: 1.3rem;
+  display: flex;
+  margin-bottom: 3rem;
+  background-color: transparent;
+  color: #000000;
+  margin-right: 4rem;
+}
+
+.user-address-box:hover,
+.user-address-box:active,
+.user-address-box:focus {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border-color: #a1a1a1 !important;
+}
+
+.user-address-box-icon {
+  font-size: 2.3rem;
+  margin-left: 0.5rem;
+  color: #777777;
+  margin-top: -0.2rem;
+}
+
+.user-address-box-type {
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.user-address-box-address {
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+  font-size: 1.7rem;
+  color: #666666;
+  text-align: left;
+}
+
+.user-address-box-edit-delete {
+  margin-left: 1rem;
+  margin-top: 0.6rem;
+}
+
+.user-address-box-edit-delete-button {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #00632c;
+  border: none;
+  padding: 0rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.user-address-box-edit-delete-button:hover,
+.user-address-box-edit-delete-button:active,
+.user-address-box-edit-delete-button:focus {
+  background-color: transparent !important;
+  color: #004b22 !important;
+}
+
+@media (max-width: 575px) {
+  .cardsincenter {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+  }
+}

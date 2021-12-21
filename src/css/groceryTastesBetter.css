@@ -1,0 +1,86 @@
+/* Tastes Better With */
+
+.padding-left0 {
+  padding-left: 0;
+}
+
+.grocery-tastes-better-products {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 82.5%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.grocery-tastes-better-product {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding-bottom: 1.5rem;
+}
+
+.grocery-tastes-better-product-image {
+  object-fit: cover;
+  /* background-image: url("/uploads/product\ background.jpg"); */
+}
+
+.grocery-tastes-better-product-name {
+  font-size: 2.4rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+.grocery-tastes-better-product-rating {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  font-size: 2rem;
+}
+
+.grocery-tastes-better-product-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 2.1rem;
+}
+
+.grocery-tastes-better-product-button {
+  margin: 1.5rem;
+  margin-bottom: 0rem;
+  /* width: 26rem; */
+  font-size: 2.1rem;
+  background-color: #00632c;
+  border-color: #00632c;
+  padding-top: 0.6rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.grocery-tastes-better-product-button:hover,
+.grocery-tastes-better-product-button:active,
+.grocery-tastes-better-product-button:focus {
+  background-color: #004b22 !important;
+  border-color: #004b22 !important;
+}
+
+.cardtitlefont {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+.centerprice {
+  text-align: center;
+}
+
+.linethrough {
+  text-decoration: line-through;
+}
+@media screen and (max-width: 600px) {
+  .mrLfm {
+    margin-left: 10px;
+  }
+}

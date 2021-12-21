@@ -1,0 +1,817 @@
+/* Grocery Product Popup */
+
+.grocery-product-popup {
+  position: fixed;
+  top: -27.5rem;
+  left: 34%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 48rem;
+  transform: translateY(0);
+  transition: 2s ease;
+  transition-delay: 0s;
+}
+
+.grocery-product-popup.open {
+  transform: translateY(35rem);
+  transition-delay: 3s;
+}
+
+.grocery-product-popup-button-div {
+  width: 48rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.grocery-product-popup-add-button {
+  width: 18rem;
+  font-size: 2rem;
+  background-color: #ffffffdd;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  position: relative;
+  top: -6rem;
+}
+
+.grocery-product-popup-add-button:hover,
+.grocery-product-popup-add-button:active,
+.grocery-product-popup-add-button:focus {
+  background-color: #ffffffdd !important;
+  color: #000000 !important;
+}
+
+.grocery-product-popup-close-button {
+  width: 18rem;
+  font-size: 2rem;
+  background-color: #000000cc;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+  border: none;
+  position: relative;
+  top: -6rem;
+}
+
+.grocery-product-popup-close-button:hover,
+.grocery-product-popup-close-button:active,
+.grocery-product-popup-close-button:focus {
+  background-color: #000000cc !important;
+}
+
+/* Grocery Product Details */
+
+.grocery-product-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 4rem;
+}
+
+.grocery-product-details-image-div {
+  width: 40%;
+  height: 44rem;
+  /* margin-right: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grocery-product-details-side-image-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.grocery-product-details-side-image {
+  /* background-image: url("/uploads/product\ background.jpg"); */
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.grocery-product-details-side-image-selected {
+  /* background-image: url("/uploads/product\ background.jpg"); */
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  cursor: pointer;
+  border: 0.1rem #3a3a3a solid;
+}
+
+.grocery-product-details-image {
+  /* background-image: url("/uploads/product\ background.jpg"); */
+  /* width: auto !important;
+  height: 38rem !important; */
+  object-fit: cover;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.grocery-product-details-image-enlarged {
+  /* background-image: url("/uploads/product\ background.jpg"); */
+  z-index: 100 !important;
+  width: 100% !important;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.grocery-product-details-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #ffffff;
+  /* width: 40%; */
+  height: 44rem;
+  /* margin-left: 2rem; */
+}
+
+.grocery-product-details-name {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.grocery-product-details-rating {
+  font-size: 2rem;
+  display: flex;
+  margin-top: -1rem;
+  margin-bottom: -0.5rem;
+}
+
+.grocery-product-details-description {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.grocery-product-details-vegan {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.grocery-product-details-category {
+  font-size: 1.7rem;
+  color: #888888;
+  border: 0.1rem #aaaaaa solid;
+  border-radius: 5rem;
+  padding: 0.8rem;
+  padding-top: 0.7rem;
+  margin-left: 2.5rem;
+  /* padding-left: 3.5rem;
+  padding-right: 3.5rem; */
+  background-color: transparent;
+  width: 100%;
+}
+
+.grocery-product-details-category:hover,
+.grocery-product-details-category:active,
+.grocery-product-details-category:focus {
+  background-color: transparent !important;
+  color: #888888 !important;
+  border-color: #aaaaaa !important;
+}
+
+.grocery-product-details-price {
+  width: 65%;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.grocery-product-details-netwt {
+  width: 65%;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  margin-top: -0.5rem;
+}
+
+.grocery-product-details-special-offer {
+  font-size: 1.7rem;
+  color: #cccccc;
+}
+
+.grocery-product-details-out-of-stock {
+  width: 95%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cc0000;
+  font-weight: bold;
+  font-size: 2.2rem;
+  border-radius: 0.5rem;
+}
+
+.grocery-product-details-buttons {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grocery-product-details-button {
+  width: 48%;
+  height: 6rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  background-color: #00632c;
+  border-color: #00632c;
+  border-radius: 0.6rem;
+  color: white;
+}
+
+.grocery-product-details-button:hover,
+.grocery-product-details-button:active,
+.grocery-product-details-button:focus {
+  background-color: #004b22 !important;
+  border-color: #004b22 !important;
+}
+
+/* More Details */
+
+.grocery-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.grocery-details-horizontal-line {
+  border-color: #2a2a2a;
+  width: 82.5%;
+  margin-top: 0rem;
+}
+
+.grocery-details-bar {
+  /* width: 82.5%; */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.grocery-details-bar-button {
+  font-size: 2.1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.5rem transparent solid;
+  border-radius: 0rem;
+  padding-bottom: 0.2rem;
+  margin-right: 12rem;
+  font-weight: bold;
+}
+
+.grocery-details-bar-button:hover,
+.grocery-details-bar-button:active,
+.grocery-details-bar-button:focus {
+  background-color: transparent !important;
+  border-color: #00832a !important;
+}
+
+.grocery-details-bar-selected {
+  border-color: #00832a;
+}
+
+/* Grocery Reviews */
+
+.grocery-reviews {
+  /* width: 82.5%; */
+  margin-top: 2.5rem;
+}
+
+.grocery-reviews-bar-write-review {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Reviews Bar */
+
+.grocery-reviews-bar {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.grocery-reviews-bar-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grocery-reviews-rating {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.grocery-reviews-number {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.grocery-reviews-bar-strips {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-top: 1.2rem;
+}
+
+.grocery-reviews-bar-strip {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.grocery-reviews-bar-strip-star {
+  color: #ffc702;
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  font-family: FontAwesome;
+}
+
+.grocery-reviews-bar-strip-value {
+  color: #cccccc;
+  font-size: 1.8rem;
+  margin-top: 0.35rem;
+  margin-right: 1.5rem;
+}
+
+.grocery-reviews-bar-inner-strip {
+  background-color: #252525;
+  width: 25rem;
+  height: 2rem;
+  margin-right: 1.2rem;
+}
+
+/* Reviews Sort */
+
+.grocery-reviews-sort {
+  margin-left: 0.6rem;
+}
+
+.grocery-reviews-sort-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1.7rem;
+  background-color: transparent;
+  border: 0.3rem #ffffff solid;
+  border-radius: 0.8rem;
+  padding: 0.5rem;
+  padding-left: 1.1rem;
+  padding-right: 0.8rem;
+}
+
+.grocery-reviews-sort-button:hover,
+.grocery-reviews-sort-button:active,
+.grocery-reviews-sort-button:focus {
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+}
+
+.grocery-reviews-sort-button-sort {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.grocery-reviews-sort-button-icon {
+  font-size: 2.8rem;
+}
+
+.grocery-reviews-sort-dropdown {
+  position: absolute;
+  display: none;
+  align-items: center;
+  background-color: #111111;
+  border: 0.3rem #ffffff solid;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  width: 22rem;
+}
+
+.grocery-reviews-sort-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.grocery-reviews-sort-dropdown-button {
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: left;
+  border-radius: 0rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.9rem;
+  padding-left: 1.1rem;
+}
+
+.grocery-reviews-sort-dropdown-button:hover,
+.grocery-reviews-sort-dropdown-button:active {
+  background-color: #1a1a1a !important;
+}
+
+.grocery-reviews-sort-dropdown-button:focus {
+  background-color: transparent !important;
+}
+
+/* Reviews Filter */
+
+.grocery-reviews-filter {
+  margin-left: 1.5rem;
+}
+
+.grocery-reviews-filter-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 22rem;
+  font-size: 1.7rem;
+  background-color: transparent;
+  border: 0.3rem #ffffff solid;
+  border-radius: 0.8rem;
+  padding: 0.5rem;
+  padding-left: 1.1rem;
+  padding-right: 0.8rem;
+}
+
+.grocery-reviews-filter-button:hover,
+.grocery-reviews-filter-button:active,
+.grocery-reviews-filter-button:focus {
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+}
+
+.grocery-reviews-filter-button-filter {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.grocery-reviews-filter-button-icon {
+  font-size: 2.8rem;
+}
+
+.grocery-reviews-filter-dropdown {
+  position: absolute;
+  display: none;
+  align-items: center;
+  background-color: #111111;
+  border: 0.3rem #ffffff solid;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  width: 22rem;
+  z-index: 500;
+}
+
+.grocery-reviews-filter-dropdown.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.grocery-reviews-filter-dropdown-button {
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: left;
+  border-radius: 0rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  padding-left: 1.1rem;
+}
+
+.grocery-reviews-filter-dropdown-button:hover,
+.grocery-reviews-filter-dropdown-button:active {
+  background-color: #1a1a1a !important;
+}
+
+.grocery-reviews-filter-dropdown-button:focus {
+  background-color: transparent !important;
+}
+
+/* Reviews Search */
+
+.grocery-reviews-search {
+  margin-left: 0rem;
+  border: 0.3rem #ffffff solid;
+  border-radius: 0.8rem;
+  width: 42rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grocery-reviews-search-input {
+  outline: none;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-top: 0.1rem;
+  height: 5.6rem;
+  width: 82%;
+}
+
+.grocery-reviews-search-input::placeholder {
+  color: #ffffff;
+}
+
+.grocery-reviews-search-submit {
+  padding: 0rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border-color: transparent;
+  height: 5.4rem;
+  padding-bottom: 0.8rem;
+  padding-right: 0.9rem;
+}
+
+.grocery-reviews-search-submit:hover,
+.grocery-reviews-search-submit:focus,
+.grocery-reviews-search-submit:active {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+/* Write Review */
+
+.grocery-write-review {
+  border: 0.1rem #2a2a2a solid;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-right: 1rem;
+  /* width: 30%; */
+}
+
+.grocery-write-review-heading {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.grocery-write-review-login-heading {
+  color: #aaaaaa;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.grocery-write-review-rating-heading {
+  color: #cccccc;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.grocery-write-review-comment-heading {
+  color: #cccccc;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.grocery-write-review-comment-input {
+  background-color: #222222;
+  border: 0.1rem #3b3b3b solid;
+  width: 100%;
+  height: 10rem;
+  overflow-y: auto;
+  outline: none;
+  color: #aaaaaa;
+  margin-bottom: 1rem;
+  resize: none;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  font-size: 1.7rem;
+}
+
+.grocery-write-review-comment {
+  background-color: #222222;
+  border: 0.1rem #3b3b3b solid;
+  width: 100%;
+  height: 10rem;
+  overflow-y: auto;
+  color: #aaaaaa;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  font-size: 1.7rem;
+}
+
+.grocery-write-review-submit {
+  font-size: 2.2rem;
+  background-color: #00632c;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.grocery-write-review-submit:hover,
+.grocery-write-review-submit:active,
+.grocery-write-review-submit:focus {
+  background-color: #004b22 !important;
+}
+
+.grocery-write-review-delete {
+  font-size: 2.2rem;
+  background-color: #252525;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.grocery-write-review-delete:hover,
+.grocery-write-review-delete:active,
+.grocery-write-review-delete:focus {
+  background-color: #202020 !important;
+}
+
+/* Reviews List */
+
+.grocery-reviews-horizontal-line {
+  border-color: #252525;
+  margin-bottom: 4rem;
+}
+
+.grocery-reviews-heading {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.grocery-reviews-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.grocery-review {
+  display: flex;
+  width: 47%;
+  margin-bottom: 4rem;
+}
+
+.grocery-review-image {
+  min-width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.grocery-review-image-icon {
+  min-width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-size: 10rem;
+}
+
+.grocery-review-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  width: 100%;
+}
+
+.grocery-review-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.grocery-review-name {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.grocery-review-comment {
+  font-size: 1.8rem;
+  color: #888888;
+  line-height: 2.3rem;
+  word-spacing: 0.1rem;
+}
+
+.grocery-review-date {
+  font-size: 1.6rem;
+  color: #4a4a4a;
+  word-spacing: 0.1rem;
+  margin-top: 1rem;
+}
+
+.width100 {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .grocery-product-details-side-image-selected {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    border: 0.1rem #3a3a3a solid;
+  }
+  .grocery-product-details-side-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+  }
+  .grocery-product-details-side-image-div {
+    height: 60%;
+  }
+  .grocery-details-bar-button {
+    font-size: 01rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3rem transparent solid;
+    border-radius: 0rem;
+    padding-bottom: 0.1rem;
+    margin-right: 0rem;
+    font-weight: bold;
+  }
+  .grocery-reviews-bar-inner-strip {
+    background-color: #252525;
+    width: 17rem;
+    height: 2rem;
+    margin-right: 1.2rem;
+  }
+  .grocery-reviews-filter {
+    margin-left: 0.5rem;
+  }
+  .grocery-reviews-filter-button {
+    width: 100%;
+  }
+  .grocery-reviews-search {
+    width: 100%;
+  }
+  .grocery-reviews-search-input {
+    width: 90%;
+  }
+  .grocery-reviews-sort-dropdown {
+    position: relative;
+    width: 100%;
+  }
+  .grocery-reviews-filter-dropdown {
+    position: relative;
+    width: 100%;
+  }
+  .grocery-reviews-search form {
+    width: 100%;
+  }
+  /* .grocery-reviews-sort-button {
+    margin-bottom: 10px;
+  } */
+  .grocery-reviews-filter-button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .grocery-reviews-search {
+    margin-top: 10px;
+  }
+  .width100 {
+    margin: 0;
+  }
+  .grocery-product-details-button {
+    font-size: 2rem;
+    height: 5rem;
+  }
+  .grocery-product-details-price {
+    width: 98%;
+  }
+  .grocery-product-details-netwt {
+    width: 98%;
+  }
+}

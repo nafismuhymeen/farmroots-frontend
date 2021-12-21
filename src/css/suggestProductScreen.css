@@ -1,0 +1,105 @@
+/* Suggest Product Screen */
+
+.suggest-product-div{
+    padding: 10rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+.suggest-product-heading{
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+.suggest-product-text{
+    margin-top: 2rem;
+    font-size: 2.1rem;
+    margin-right: 5rem;
+}
+
+/* Form */
+
+.suggest-product-form{
+    margin-top: 5rem;
+}
+
+.suggest-product-form-input-div{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-bottom: 3rem;
+}
+
+.suggest-product-form-label{
+    font-size: 1.9rem;
+}
+
+.suggest-product-form-input{
+    margin-top: .3rem;
+}
+
+.suggest-product-form-textarea{
+    margin-top: .3rem;
+    outline: none;
+    resize: none;
+    border-color: #c0c0c0;
+    border-radius: .5rem;
+    height: 15rem;
+    padding: .5rem;
+}
+
+.suggest-product-form-button{
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 20%;
+    border: none;
+    border-radius: .5rem;
+    font-weight: bold;
+    background-color: #00632c;
+}
+
+.suggest-product-form-button:hover,
+.suggest-product-form-button:active,
+.suggest-product-form-button:focus{
+    background-color: #004b22 !important;
+}
+
+/* Modal */
+
+.suggest-product-modal-button{
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 3rem;
+    padding: 0rem;
+    margin-top: -.8rem;
+}
+
+.suggest-product-modal-button:hover,
+.suggest-product-modal-button:active,
+.suggest-product-modal-button:focus{
+    background-color: transparent !important;
+    color: #000 !important;
+}
+
+.suggest-product-modal-icon{
+    font-size: 10rem;
+    color: #00632c;
+}
+
+.suggest-product-modal-heading{
+    margin-top: 2rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.suggest-product-modal-text{
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}
+
+.suggest-product-modal-text:last-child{
+    margin-bottom: 1rem;
+}

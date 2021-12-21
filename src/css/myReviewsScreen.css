@@ -1,0 +1,144 @@
+/* My Reivews Screen */
+
+/* Review Edit Modal */
+
+.user-review-edit-modal-close{
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.user-review-edit-modal-close:hover,
+.user-review-edit-modal-close:active,
+.user-review-edit-modal-close:focus{
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.user-review-edit-modal-main-heading{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.user-review-edit-modal-heading{
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+}
+
+.user-review-edit-modal-input{
+    background-color: #ffffff;
+    border: .1rem #aaaaaa solid;
+    width: 100%;
+    height: 12rem;
+    overflow-y: auto;
+    outline: none;
+    color: #000;
+    margin-top: .4rem;
+    margin-bottom: 1rem;
+    resize: none;
+    padding: .8rem;
+    padding-left: 1rem;
+    font-size: 1.7rem;
+}
+
+.user-review-edit-modal-submit{
+    font-size: 2rem;
+    background-color: #00632c;
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    font-weight: bold;
+}
+
+.user-review-edit-modal-submit:hover,
+.user-review-edit-modal-submit:active,
+.user-review-edit-modal-submit:focus{
+    background-color: #004b22 !important;
+}
+
+/* Review Content */
+
+.user-reviews{
+    flex: 0 1 80%;
+    padding-left: 5rem;
+    padding-right: 1rem;
+}
+
+.user-reviews-heading{
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    font-weight: bold;
+}
+
+.user-reviews-content{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.user-reviews-empty-message{
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-reviews-box{
+    width: 29.8%;
+    min-height: 12rem;
+    border: .1rem #c4c4c4 solid;
+    border-radius: .3rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    background-color: transparent;
+    color: #000000;
+    margin-right: 4rem;
+}
+
+.user-reviews-box-product{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.user-reviews-box-horizontal-line{
+    border-color: #999999;
+    border-style: dashed;
+    margin-bottom: 1.2rem;
+}
+
+.user-reviews-box-review{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.user-reviews-box-edit-delete-button{
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #00632c;
+    border: none;
+    padding: 0rem;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.user-reviews-box-edit-delete-button:hover,
+.user-reviews-box-edit-delete-button:active,
+.user-reviews-box-edit-delete-button:focus{
+    background-color: transparent !important;
+    color: #004b22 !important;
+}

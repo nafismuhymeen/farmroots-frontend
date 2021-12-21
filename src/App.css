@@ -1,0 +1,263 @@
+*{
+  font-family: Bahnschrift Light;
+}
+.App {
+  text-align: center;
+}
+
+.cen{
+  float: right;
+}
+.marg{
+  margin-bottom: 50px;
+}
+
+.mari{
+  border-color: #fff;
+  border-style: dashed;
+  margin-top: 50px;
+}
+.rpsc{
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-width:1px;
+  padding:10px;
+}
+.customSelect {
+  width: 15% !important;
+  font-size: 1.5rem !important;
+  margin-left: calc(50% - 33px);
+}
+
+/* oreder css */
+.borderBottom {
+  border-bottom: 1px solid #cbcfd2;
+}
+
+.contentEnd {
+  display: flex;
+  justify-content: end;
+}
+
+.codandcollect {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.borderContainer {
+  border: 1px solid #cbcfd2;
+  font-weight: 500;
+}
+
+.address {
+  width: 50%;
+}
+
+.invoicetable.table td,
+.invoicetable.table th {
+  padding: 0.25rem !important;
+  text-align: center;
+}
+
+.invoicetable.table .leftalign {
+  text-align: left;
+}
+
+.paddingzero {
+  padding: 0;
+}
+
+.font500 {
+  font-weight: 500;
+}
+
+/* invoice css end */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.viewAllContainer {
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+}
+.greenbtn {
+  background-color: #00632c;
+  color: #f1f1f1;
+}
+.biggreenbtn {
+  display: grid;
+}
+.dflex {
+  display: flex;
+}
+
+.centerCard {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.cardColor1 {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  text-align: inherit;
+  min-height: 400px;
+  padding: 50px;
+}
+.cardColor2 {
+  background-color: #2b2d47;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: inherit;
+  min-height: 400px;
+}
+
+.searchstyle {
+  display: block;
+}
+
+.Footer {
+  background-color: #2b3030;
+  min-height: 250px;
+  z-index: 1;
+  display: grid;
+  justify-content: center;
+  bottom: 0;
+  padding-top: 20px;
+  height: fit-content;
+}
+.gridstyle {
+  display: grid;
+}
+
+.fottercardcolor {
+  background-color: #393f3f !important;
+  /* width: 20rem; */
+  min-height: 180px;
+}
+.fottercardcolor h5 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.fottercardcolor a {
+  color: #fff;
+  font-size: 12px;
+}
+.social-media .btn-primary {
+  background-color: #2b3030 !important ;
+  border-color: #2b3030 !important ;
+}
+.home-partners {
+  display: flex;
+  flex-direction: column;
+  background-color: #40465f;
+
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+.home-partners-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+.home-partners-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 575px) {
+  .gridstylefooter {
+    margin-left: auto;
+  }
+  .fottercardcolor {
+    width: 15rem;
+    background-color: #393f3f !important;
+    min-height: 190px;
+  }
+  .fottercardcolor h5 {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+}
+.stickytopheader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+/* .stickytopheader.bg-dark {
+  background-color: #1a1a1a !important;
+} */
+.customHeaderBtn {
+  background: transparent;
+  color: #000;
+}
+.customHeaderBtn.btn.focus,
+.customHeaderBtn.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0;
+  background-color: #00632c;
+}
+/* 
+.headerbtnstyle {
+  font-size: 1.2rem;
+  color: black;
+} */
+.navbar-light .navbar-nav .nav-link.headerbtnstyle {
+  color: rgba(0, 0, 0);
+}
+
+.home-partners-content img {
+  width: 174px;
+  padding: 20px;
+}
+
+.card-link {
+  font-size: 1.3rem;
+  margin: 5px;
+  margin-left:0!important;
+}
+
+@media (min-width: 1300px) {
+  .fottercardcolor {
+    width: 18rem;
+  }
+}
