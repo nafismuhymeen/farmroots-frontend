@@ -68,7 +68,7 @@ function UserInfoScreen(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (userInfo.mobileNumber != mobileNumber) {
+    if (userInfo.mobileNumber !== mobileNumber) {
       setMobileNumber(userInfo.mobileNumber);
       toast.warning("MobileNumber can not be changed without admin permission");
     } else {

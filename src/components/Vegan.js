@@ -7,7 +7,7 @@ export default function Vegan(props) {
   let a = logoGet.logo;
   let cc = "";
   let cd = "";
-  if (a != undefined) {
+  if (a !== undefined) {
     cc = a.vegIcon;
     cd = a.nonVegIcon;
   }

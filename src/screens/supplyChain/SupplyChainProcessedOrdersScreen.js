@@ -1,28 +1,29 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Button, Modal } from 'react-bootstrap';
-import { FiX } from 'react-icons/fi';
-import Moment from 'react-moment';
-import { useDispatch, useSelector } from 'react-redux';
-import { listDeliveryGuys } from '../../actions/employeeActions';
+import React, { useEffect, useState, useRef } from "react";
+import { Button, Modal } from "react-bootstrap";
+import { FiX } from "react-icons/fi";
+import Moment from "react-moment";
+import { useDispatch, useSelector } from "react-redux";
+import { listDeliveryGuys } from "../../actions/employeeActions";
 import {
   listSupplyChainOrders,
   assignDeliveryGuy,
-} from '../../actions/orderActions';
-import { listZones } from '../../actions/orderDivisionActions';
-import Header from '../../components/Header';
-import SupplyChainSidebar from '../../components/SupplyChainSidebar';
-import { useReactToPrint } from 'react-to-print';
-import { Icon } from '@iconify/react';
-import currencyBdt from '@iconify-icons/mdi/currency-bdt';
-import { getPrice } from '../../actions/priceActions';
+} from "../../actions/orderActions";
+import { listZones } from "../../actions/orderDivisionActions";
+import Header from "../../components/Header";
+import SupplyChainSidebar from "../../components/SupplyChainSidebar";
+import { useReactToPrint } from "react-to-print";
+import { Icon } from "@iconify/react";
+import currencyBdt from "@iconify-icons/mdi/currency-bdt";
+import { getPrice } from "../../actions/priceActions";
+import farmrootsLogo from "./farmroots logo.jpg";
 
-var Barcode = require('react-barcode');
+var Barcode = require("react-barcode");
 
 function SupplyChainProcessedOrdersScreen(props) {
-  const [zone, setZone] = useState('');
+  const [zone, setZone] = useState("");
   const [orderStartNumber, setOrderStartNumber] = useState(0);
   const [orderEndNumber, setOrderEndNumber] = useState(0);
-  const [deliveryGuy, setDeliveryGuy] = useState('');
+  const [deliveryGuy, setDeliveryGuy] = useState("");
   const [assignModalVisible, setAssignModalVisible] = useState(false);
 
   const orderDeliveryGuyAssign = useSelector(
@@ -115,7 +116,7 @@ function SupplyChainProcessedOrdersScreen(props) {
           <form className="admin-uploads-form" onSubmit={submitHandler}>
             <div
               className="d-flex justify-content-between align-items-center"
-              style={{ width: '100%', marginBottom: '2rem' }}
+              style={{ width: "100%", marginBottom: "2rem" }}
             >
               <label className="admin-uploads-label">Start Number</label>
               <input
@@ -129,7 +130,7 @@ function SupplyChainProcessedOrdersScreen(props) {
             </div>
             <div
               className="d-flex justify-content-between align-items-center"
-              style={{ width: '100%', marginBottom: '2rem' }}
+              style={{ width: "100%", marginBottom: "2rem" }}
             >
               <label className="admin-uploads-label">End Number</label>
               <input
@@ -143,7 +144,7 @@ function SupplyChainProcessedOrdersScreen(props) {
             </div>
             <div
               className="d-flex justify-content-between align-items-center"
-              style={{ width: '100%' }}
+              style={{ width: "100%" }}
             >
               <label className="admin-uploads-label">Delivery Guy</label>
               <select
@@ -175,8 +176,8 @@ function SupplyChainProcessedOrdersScreen(props) {
 
       <div className="main">
         <div className="d-flex">
-          <SupplyChainSidebar value={'Processed'}></SupplyChainSidebar>
-          <div className="admin-content" style={{ paddingTop: '1rem' }}>
+          <SupplyChainSidebar value={"Processed"}></SupplyChainSidebar>
+          <div className="admin-content" style={{ paddingTop: "1rem" }}>
             {loading ? (
               <div></div>
             ) : error ? (
@@ -225,7 +226,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                     <div
                       key={order._id}
                       className="admin-orders-content-box"
-                      style={{ width: '100%' }}
+                      style={{ width: "100%" }}
                     >
                       <div>
                         <b>Office </b>
@@ -264,7 +265,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                       <div className="d-flex justify-content-between">
                         <div
                           className="admin-order-items"
-                          style={{ width: '45%' }}
+                          style={{ width: "45%" }}
                         >
                           <div className="admin-order-items-heading">
                             Order Items
@@ -294,7 +295,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                         </div>
                         <div
                           className="admin-order-items"
-                          style={{ width: '54%' }}
+                          style={{ width: "54%" }}
                         >
                           <div className="admin-order-items-heading">
                             Delivery Address
@@ -319,13 +320,13 @@ function SupplyChainProcessedOrdersScreen(props) {
                                 <th>Area</th>
                                 <td>{order.shipping.area}</td>
                               </tr>
-                              {order.shipping.district === 'Dhaka' && (
+                              {order.shipping.district === "Dhaka" && (
                                 <tr>
                                   <th>Zone Name</th>
                                   <td>{order.shipping.zoneName}</td>
                                 </tr>
                               )}
-                              {order.shipping.district === 'Dhaka' && (
+                              {order.shipping.district === "Dhaka" && (
                                 <tr>
                                   <th>Zone Number</th>
                                   <td>{order.shipping.zoneNumber}</td>
@@ -347,7 +348,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                           </table>
                         </div>
                       </div>
-                      {order.instruction !== 'None' && (
+                      {order.instruction !== "None" && (
                         <div className="admin-order-instruction">
                           <b>Instruction: </b>
                           {order.instruction}
@@ -359,7 +360,7 @@ function SupplyChainProcessedOrdersScreen(props) {
 
                 {/* Invoice Format */}
 
-                <div style={{ display: 'None' }}>
+                <div style={{ display: "None" }}>
                   <div ref={componentRef}>
                     {orders.map((order) => (
                       <div
@@ -386,7 +387,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                                 <div className="col-sm-12">
                                   <img
                                     alt="company logo"
-                                    src="/uploads\farmroots logo.jpg"
+                                    src={farmrootsLogo}
                                     className="admin-print-company-logo"
                                   ></img>
                                 </div>
@@ -411,9 +412,9 @@ function SupplyChainProcessedOrdersScreen(props) {
                             <div
                               className="col-sm-6"
                               style={{
-                                fontSize: '2.2rem',
-                                float: 'left',
-                                width: '50%',
+                                fontSize: "2.2rem",
+                                float: "left",
+                                width: "50%",
                               }}
                             >
                               <b>{`To Be Paid: ${order.totalPrice}`}</b>
@@ -422,26 +423,26 @@ function SupplyChainProcessedOrdersScreen(props) {
                               className="col-sm-6"
                               align="right"
                               style={{
-                                fontSize: '2.2rem',
-                                float: 'right',
-                                width: '50%',
+                                fontSize: "2.2rem",
+                                float: "right",
+                                width: "50%",
                               }}
                             >
                               <b>{order.paymentMethod}</b>
                             </div>
                           </div>
                           <hr className="mari"></hr>
-                          <div style={{ marginTop: '1rem' }} className="row">
+                          <div style={{ marginTop: "1rem" }} className="row">
                             <div className="col-sm-6 p-2">
                               <div
                                 class="rpsc"
-                                style={{ float: 'left', width: '45%' }}
+                                style={{ float: "left", width: "45%" }}
                               >
                                 <div>Order Date: {order.createdAt}</div>
                                 <div>Ship To:</div>
                                 <div className="mt-3">{order.userName}</div>
                                 <div className="mt-1">
-                                  {' '}
+                                  {" "}
                                   {order.shipping.mobileNumber != null ? (
                                     <>
                                       {`Phone#: ${order.userCountryCode} ${order.shipping.mobileNumber}`}
@@ -452,12 +453,12 @@ function SupplyChainProcessedOrdersScreen(props) {
                                     </>
                                   )}
                                 </div>
-                                {order.shipping.landmark === '' ? (
+                                {order.shipping.landmark === "" ? (
                                   <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.area}`}</div>
                                 ) : (
                                   <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.landmark}, ${order.shipping.area}`}</div>
                                 )}
-                                {order.shipping.postalCode === '' ? (
+                                {order.shipping.postalCode === "" ? (
                                   <div>{`${order.shipping.district}, ${order.shipping.division}`}</div>
                                 ) : (
                                   <div>{`${order.shipping.district}, ${order.shipping.division}, ${order.shipping.postalCode}`}</div>
@@ -465,7 +466,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                               </div>
                               <div
                                 class="rpsc"
-                                style={{ float: 'right', width: '45%' }}
+                                style={{ float: "right", width: "45%" }}
                               >
                                 <div align="right" className="">{` `}</div>
 
@@ -498,14 +499,14 @@ function SupplyChainProcessedOrdersScreen(props) {
                           </div> */}
                           <div className="row mt-4 mb-5">
                             <table
-                              style={{ fontSize: '1.2rem' }}
+                              style={{ fontSize: "1.2rem" }}
                               className="table table-bordered invoicetable  mt-4 mb-5"
                             >
                               <thead>
                                 <tr className="">
                                   <th>SL</th>
                                   <th class="leftalign" scope="col">
-                                    Product Name{' '}
+                                    Product Name{" "}
                                   </th>
                                   <th>Size</th>
                                   <th>Qty</th>
@@ -569,7 +570,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                           <div className="row my-4">
                             <div
                               className="col-sm-6 "
-                              style={{ float: 'left', width: '50%' }}
+                              style={{ float: "left", width: "50%" }}
                             >
                               <b>
                                 Delivered By
@@ -579,7 +580,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                             <div
                               className="col-sm-6 "
                               align="right"
-                              style={{ float: 'right', width: '50%' }}
+                              style={{ float: "right", width: "50%" }}
                             >
                               <b>
                                 Received By
@@ -608,7 +609,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                                 <div className="col-sm-12">
                                   <img
                                     alt="company logo"
-                                    src="/uploads\farmroots logo.jpg"
+                                    src={farmrootsLogo}
                                     className="admin-print-company-logo"
                                   ></img>
                                 </div>
@@ -633,9 +634,9 @@ function SupplyChainProcessedOrdersScreen(props) {
                             <div
                               className="col-sm-6"
                               style={{
-                                fontSize: '2.2rem',
-                                float: 'left',
-                                width: '50%',
+                                fontSize: "2.2rem",
+                                float: "left",
+                                width: "50%",
                               }}
                             >
                               <b>{`To Be Received: ${order.totalPrice}`}</b>
@@ -644,26 +645,26 @@ function SupplyChainProcessedOrdersScreen(props) {
                               className="col-sm-6"
                               align="right"
                               style={{
-                                fontSize: '2.2rem',
-                                float: 'right',
-                                width: '50%',
+                                fontSize: "2.2rem",
+                                float: "right",
+                                width: "50%",
                               }}
                             >
                               <b>{order.paymentMethod}</b>
                             </div>
                           </div>
                           <hr className="mari"></hr>
-                          <div style={{ marginTop: '1rem' }} className="row">
+                          <div style={{ marginTop: "1rem" }} className="row">
                             <div className="col-sm-6 p-2">
                               <div
                                 class="rpsc"
-                                style={{ float: 'left', width: '45%' }}
+                                style={{ float: "left", width: "45%" }}
                               >
                                 <div>Order Date: {order.createdAt}</div>
                                 <div>Ship To:</div>
                                 <div className="mt-3">{order.userName}</div>
                                 <div className="mt-1">
-                                  {' '}
+                                  {" "}
                                   {order.shipping.mobileNumber != null ? (
                                     <>
                                       {`Phone#: ${order.userCountryCode} ${order.shipping.mobileNumber}`}
@@ -674,12 +675,12 @@ function SupplyChainProcessedOrdersScreen(props) {
                                     </>
                                   )}
                                 </div>
-                                {order.shipping.landmark === '' ? (
+                                {order.shipping.landmark === "" ? (
                                   <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.area}`}</div>
                                 ) : (
                                   <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.landmark}, ${order.shipping.area}`}</div>
                                 )}
-                                {order.shipping.postalCode === '' ? (
+                                {order.shipping.postalCode === "" ? (
                                   <div>{`${order.shipping.district}, ${order.shipping.division}`}</div>
                                 ) : (
                                   <div>{`${order.shipping.district}, ${order.shipping.division}, ${order.shipping.postalCode}`}</div>
@@ -687,7 +688,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                               </div>
                               <div
                                 class="rpsc"
-                                style={{ float: 'right', width: '45%' }}
+                                style={{ float: "right", width: "45%" }}
                               >
                                 <div align="right" className="">{` `}</div>
 
@@ -720,14 +721,14 @@ function SupplyChainProcessedOrdersScreen(props) {
                           </div> */}
                           <div className="row mt-4 mb-5">
                             <table
-                              style={{ fontSize: '1.2rem' }}
+                              style={{ fontSize: "1.2rem" }}
                               className="table table-bordered invoicetable  mt-4 mb-5"
                             >
                               <thead>
                                 <tr className="">
                                   <th>SL</th>
                                   <th class="leftalign" scope="col">
-                                    Product Name{' '}
+                                    Product Name{" "}
                                   </th>
                                   <th>Size</th>
                                   <th>Qty</th>
@@ -791,7 +792,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                           <div className="row my-4">
                             <div
                               className="col-sm-6 "
-                              style={{ float: 'left', width: '50%' }}
+                              style={{ float: "left", width: "50%" }}
                             >
                               <b>
                                 Delivered By
@@ -801,7 +802,7 @@ function SupplyChainProcessedOrdersScreen(props) {
                             <div
                               className="col-sm-6 "
                               align="right"
-                              style={{ float: 'right', width: '50%' }}
+                              style={{ float: "right", width: "50%" }}
                             >
                               <b>
                                 Received By

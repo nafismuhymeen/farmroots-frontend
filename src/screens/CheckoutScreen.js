@@ -362,7 +362,7 @@ function CheckoutScreen(props) {
               localShippingPrice = dcharge[i];
             }
           }
-        } else if (shipping.district != "Dhaka") {
+        } else if (shipping.district !== "Dhaka") {
           for (let i = 0; i < dcharge.length; i++) {
             if (totalgramvalue >= minweightdcharge[i]) {
               localShippingPrice = dcharge[i];

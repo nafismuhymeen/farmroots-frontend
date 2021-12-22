@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Button, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { getEmployeeLogo } from '../actions/logoActions';
+import { getEmployeeLogo } from "../actions/logoActions";
 import {
   addToCart,
   emptyBuyNow,
@@ -20,9 +20,8 @@ function GroceryCart(props) {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const logoGet = useSelector(state => state.logoGet);
+  const logoGet = useSelector((state) => state.logoGet);
   const { logo } = logoGet;
-
 
   useEffect(() => {
     dispatch(listCartItems(cartItems));
@@ -44,11 +43,10 @@ function GroceryCart(props) {
     props.history.push("/checkout");
   };
 
-
   let a = logoGet.logo;
-  let cc = ""
-  if (a != undefined) {
-    cc = a.emptyCart
+  let cc = "";
+  if (a !== undefined) {
+    cc = a.emptyCart;
   }
 
   return (
@@ -58,7 +56,11 @@ function GroceryCart(props) {
           <Button className="btn-dark cart-close-button" onClick={closeCart}>
             <MdClose></MdClose>
           </Button>
-          <img className="grocery-cart-empty-image" src={cc} alt="empty cart"></img>
+          <img
+            className="grocery-cart-empty-image"
+            src={cc}
+            alt="empty cart"
+          ></img>
           <div className="d-flex align-items-center flex-column mt-3">
             <div className="grocery-cart-empty-text">Your cart is empty</div>
             <div className="grocery-cart-empty-text">

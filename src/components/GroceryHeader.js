@@ -136,7 +136,7 @@ function Header(props) {
   };
   let a = logoGet.logo;
   let cc = "";
-  if (a != undefined) {
+  if (a !== undefined) {
     cc = a.farmrootsWhiteLogo;
   }
   return (

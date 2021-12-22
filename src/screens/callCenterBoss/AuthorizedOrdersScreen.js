@@ -65,9 +65,7 @@ function AuthorizedOrdersScreen(props) {
   let items = [];
   let updateOriginalArray;
 
-  useEffect(() => {
-
-  }, [itemquantity]);
+  useEffect(() => {}, [itemquantity]);
   useEffect(() => {
     if (orderPartialCreateSuccess) {
       setSplitModalVisible(false);
@@ -270,7 +268,6 @@ function AuthorizedOrdersScreen(props) {
   const orderItemsEditHandler = (orderItems) => {
     orderItems.map((x) => {
       itemquantity.map((y) => {
-
         if (y.id == x._id) {
           x.qty = y.originalqty - y.newqty;
         }
@@ -300,9 +297,7 @@ function AuthorizedOrdersScreen(props) {
   };
 
   const partialOrderItemsHandler = (checked, orderItem) => {
-
     items = partialOrderItems;
-
 
     if (checked == true) {
       items.push(orderItem);
@@ -313,11 +308,9 @@ function AuthorizedOrdersScreen(props) {
         }
         return v;
       });
-
     }
-    if (checked != true) {
+    if (checked !== true) {
       items.pop(orderItem);
-
     }
 
     // else {
@@ -336,7 +329,6 @@ function AuthorizedOrdersScreen(props) {
 
     let abcnew = abc.map((old) => {
       itemquantity.map((newPrice) => {
-
         if (old._id == newPrice.id) {
           old.qty = newPrice.newqty;
         }
@@ -353,9 +345,6 @@ function AuthorizedOrdersScreen(props) {
     var oldOrderItems = [];
 
     for (const item of orderItems) {
-
-
-
       const found = partialOrderItems.find(function (element) {
         return element._id.toString() === item._id.toString();
       });
@@ -366,7 +355,6 @@ function AuthorizedOrdersScreen(props) {
     setTimeout(() => {
       partialOrderItems.map((x) => {
         itemquantity.map((y) => {
-
           if (y.id == x._id) {
             x.qty = y.newqty;
           }
@@ -383,7 +371,7 @@ function AuthorizedOrdersScreen(props) {
         totalPrice,
         deliveryTime,
       ] = calculateBill(partialOrderItems);
-      setNewOrderNumber(`${orderNumber}_1`)
+      setNewOrderNumber(`${orderNumber}_1`);
       dispatch(
         createPartialOrder({
           orderId: orderId,
@@ -405,8 +393,6 @@ function AuthorizedOrdersScreen(props) {
     orderItemsEditHandler(updateOriginalArray);
     setSplitModalVisible(false);
     abcappend = [];
-
- 
   };
 
   const orderEditHandler = (e) => {
@@ -439,7 +425,6 @@ function AuthorizedOrdersScreen(props) {
     return cb();
   };
 
-
   const openSplitModalFunction = (order) => {
     let ord = order.orderItems;
 
@@ -458,7 +443,6 @@ function AuthorizedOrdersScreen(props) {
     });
   };
 
-
   return (
     <div className="grid">
       <div className="grid-header">
@@ -475,7 +459,7 @@ function AuthorizedOrdersScreen(props) {
         dialogClassName="modal-35w"
       >
         <Modal.Body>
-          <div style={{ fontSize: '2.2rem' }} className="ml-1 mt-3 mb-4">
+          <div style={{ fontSize: "2.2rem" }} className="ml-1 mt-3 mb-4">
             <b>Choose the items of partial order</b>
           </div>
           <form onSubmit={splitHandler} className="pt-2">
@@ -483,7 +467,7 @@ function AuthorizedOrdersScreen(props) {
               <>
                 <div key={item._id} className="d-flex mb-3">
                   <input
-                    style={{ cursor: 'pointer', marginTop: '.3rem' }}
+                    style={{ cursor: "pointer", marginTop: ".3rem" }}
                     type="checkbox"
                     name={item.name}
                     onChange={(e) =>
@@ -491,7 +475,7 @@ function AuthorizedOrdersScreen(props) {
                     }
                   ></input>
                   <label
-                    style={{ fontSize: '1.8rem' }}
+                    style={{ fontSize: "1.8rem" }}
                     className="ml-3"
                   >{`${item.name} (${item.netWeight})`}</label>
                 </div>
@@ -527,7 +511,7 @@ function AuthorizedOrdersScreen(props) {
             <div className="d-flex justify-content-center">
               <Button
                 className="admin-modal-form-submit"
-                style={{ marginBottom: '1.5rem' }}
+                style={{ marginBottom: "1.5rem" }}
                 type="submit"
               >
                 Submit
@@ -538,7 +522,7 @@ function AuthorizedOrdersScreen(props) {
       </Modal>
 
       <div className="admin-modal-background">
-        <div className="admin-modal" style={{ width: '45%' }}>
+        <div className="admin-modal" style={{ width: "45%" }}>
           <div className="d-flex justify-content-between align-items-center">
             <div className="admin-modal-heading">Edit Order</div>
             <Button onClick={closeModal} className="admin-modal-close-button">
@@ -571,7 +555,7 @@ function AuthorizedOrdersScreen(props) {
             <div className="d-flex justify-content-center">
               <Button
                 className="admin-modal-form-submit"
-                style={{ marginBottom: '1.5rem' }}
+                style={{ marginBottom: "1.5rem" }}
                 type="submit"
               >
                 Submit
@@ -583,8 +567,8 @@ function AuthorizedOrdersScreen(props) {
 
       <div className="main">
         <div className="d-flex">
-          <CallCenterBossSidebar value={'Authorized'}></CallCenterBossSidebar>
-          <div className="admin-content" style={{ paddingTop: '1rem' }}>
+          <CallCenterBossSidebar value={"Authorized"}></CallCenterBossSidebar>
+          <div className="admin-content" style={{ paddingTop: "1rem" }}>
             {loading ? (
               <div></div>
             ) : error ? (
@@ -622,7 +606,7 @@ function AuthorizedOrdersScreen(props) {
                     <div
                       key={order._id}
                       className="admin-orders-content-box"
-                      style={{ width: '100%' }}
+                      style={{ width: "100%" }}
                     >
                       <div className="d-flex justify-content-between">
                         <div className="d-flex">
@@ -657,14 +641,14 @@ function AuthorizedOrdersScreen(props) {
                         <div>
                           <Button
                             onClick={() => openSplitModalFunction(order)}
-                            style={{ width: '18rem' }}
+                            style={{ width: "18rem" }}
                             className="user-orders-cancel-order-button"
                           >
                             Split Order
                           </Button>
                           <Button
                             onClick={() => openEditModal(order)}
-                            style={{ width: '18rem' }}
+                            style={{ width: "18rem" }}
                             className="user-orders-view-details-button"
                           >
                             Edit Order
@@ -674,7 +658,7 @@ function AuthorizedOrdersScreen(props) {
                       <div className="d-flex justify-content-between">
                         <div
                           className="admin-order-items"
-                          style={{ width: '49%' }}
+                          style={{ width: "49%" }}
                         >
                           <div className="admin-order-items-heading">
                             Order Items
@@ -704,7 +688,7 @@ function AuthorizedOrdersScreen(props) {
                         </div>
                         <div
                           className="admin-order-items"
-                          style={{ width: '50%' }}
+                          style={{ width: "50%" }}
                         >
                           <div className="admin-order-items-heading">
                             User Info
@@ -737,7 +721,7 @@ function AuthorizedOrdersScreen(props) {
                           </table>
                         </div>
                       </div>
-                      {order.instruction !== 'None' && (
+                      {order.instruction !== "None" && (
                         <div className="admin-order-instruction">
                           <b>Instruction: </b>
                           {order.instruction}

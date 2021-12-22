@@ -1,25 +1,26 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Button, Modal } from 'react-bootstrap';
-import { FiX } from 'react-icons/fi';
-import Moment from 'react-moment';
-import { useDispatch, useSelector } from 'react-redux';
-import { listDeliveryGuys } from '../../actions/employeeActions';
+import React, { useEffect, useState, useRef } from "react";
+import { Button, Modal } from "react-bootstrap";
+import { FiX } from "react-icons/fi";
+import Moment from "react-moment";
+import { useDispatch, useSelector } from "react-redux";
+import { listDeliveryGuys } from "../../actions/employeeActions";
 import {
   listSupplyChainOrders,
   assignDeliveryGuy,
-} from '../../actions/orderActions';
-import { listZones } from '../../actions/orderDivisionActions';
-import Header from '../../components/Header';
-import SupplyChainSidebar from '../../components/SupplyChainSidebar';
-import { useReactToPrint } from 'react-to-print';
-import { Icon } from '@iconify/react';
-import currencyBdt from '@iconify-icons/mdi/currency-bdt';
-import { getPrice } from '../../actions/priceActions';
+} from "../../actions/orderActions";
+import { listZones } from "../../actions/orderDivisionActions";
+import Header from "../../components/Header";
+import SupplyChainSidebar from "../../components/SupplyChainSidebar";
+import { useReactToPrint } from "react-to-print";
+import { Icon } from "@iconify/react";
+import currencyBdt from "@iconify-icons/mdi/currency-bdt";
+import { getPrice } from "../../actions/priceActions";
+import farmrootsLogo from "./farmroots logo.jpg";
 
-var Barcode = require('react-barcode');
+var Barcode = require("react-barcode");
 
 function PrintInvoice(props) {
-  const [zone, setZone] = useState('');
+  const [zone, setZone] = useState("");
   //   const [orderStartNumber, setOrderStartNumber] = useState(0);
   //   const [orderEndNumber, setOrderEndNumber] = useState(0);
   //   const [deliveryGuy, setDeliveryGuy] = useState("");
@@ -91,7 +92,7 @@ function PrintInvoice(props) {
   return (
     <>
       <div className="">
-        <div className="admin-content" style={{ paddingTop: '1rem' }}>
+        <div className="admin-content" style={{ paddingTop: "1rem" }}>
           <Button onClick={handlePrint} className="admin-header-button">
             Print Invoices
           </Button>
@@ -103,7 +104,7 @@ function PrintInvoice(props) {
             <>
               {/* Invoice Format */}
 
-              <div style={{ display: 'None' }}>
+              <div style={{ display: "None" }}>
                 <div ref={componentRef}>
                   {orders.map((order) => (
                     <div
@@ -128,7 +129,7 @@ function PrintInvoice(props) {
                               <div className="col-sm-12">
                                 <img
                                   alt="company logo"
-                                  src="/uploads\farmroots logo.jpg"
+                                  src={farmrootsLogo}
                                   className="admin-print-company-logo"
                                 ></img>
                               </div>
@@ -150,9 +151,9 @@ function PrintInvoice(props) {
                           <div
                             className="col-sm-6"
                             style={{
-                              fontSize: '2.2rem',
-                              float: 'left',
-                              width: '50%',
+                              fontSize: "2.2rem",
+                              float: "left",
+                              width: "50%",
                             }}
                           >
                             <b>{`To Be Paid: ${order.totalPrice}`}</b>
@@ -161,20 +162,20 @@ function PrintInvoice(props) {
                             className="col-sm-6"
                             align="right"
                             style={{
-                              fontSize: '2.2rem',
-                              float: 'right',
-                              width: '50%',
+                              fontSize: "2.2rem",
+                              float: "right",
+                              width: "50%",
                             }}
                           >
                             <b>{order.paymentMethod}</b>
                           </div>
                         </div>
                         <hr className="mari"></hr>
-                        <div style={{ marginTop: '1rem' }} className="row">
+                        <div style={{ marginTop: "1rem" }} className="row">
                           <div className="col-sm-6 p-2">
                             <div
                               class="rpsc"
-                              style={{ float: 'left', width: '45%' }}
+                              style={{ float: "left", width: "45%" }}
                             >
                               <div>Order Date: {order.createdAt}</div>
                               <div>Ship To:</div>
@@ -190,12 +191,12 @@ function PrintInvoice(props) {
                                   </>
                                 )}
                               </div>
-                              {order.shipping.landmark === '' ? (
+                              {order.shipping.landmark === "" ? (
                                 <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.area}`}</div>
                               ) : (
                                 <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.landmark}, ${order.shipping.area}`}</div>
                               )}
-                              {order.shipping.postalCode === '' ? (
+                              {order.shipping.postalCode === "" ? (
                                 <div>{`${order.shipping.district}, ${order.shipping.division}`}</div>
                               ) : (
                                 <div>{`${order.shipping.district}, ${order.shipping.division}, ${order.shipping.postalCode}`}</div>
@@ -203,7 +204,7 @@ function PrintInvoice(props) {
                             </div>
                             <div
                               class="rpsc"
-                              style={{ float: 'right', width: '45%' }}
+                              style={{ float: "right", width: "45%" }}
                             >
                               <div align="right" className="">{` `}</div>
 
@@ -236,14 +237,14 @@ function PrintInvoice(props) {
                           </div> */}
                         <div className="row mt-4 mb-5">
                           <table
-                            style={{ fontSize: '1.2rem' }}
+                            style={{ fontSize: "1.2rem" }}
                             className="table table-bordered invoicetable  mt-4 mb-5"
                           >
                             <thead>
                               <tr className="">
                                 <th>SL</th>
                                 <th class="leftalign" scope="col">
-                                  Product Name{' '}
+                                  Product Name{" "}
                                 </th>
                                 <th>Size</th>
                                 <th>Qty</th>
@@ -307,7 +308,7 @@ function PrintInvoice(props) {
                         <div className="row my-4">
                           <div
                             className="col-sm-6 "
-                            style={{ float: 'left', width: '50%' }}
+                            style={{ float: "left", width: "50%" }}
                           >
                             <b>
                               Delivered By
@@ -317,7 +318,7 @@ function PrintInvoice(props) {
                           <div
                             className="col-sm-6 "
                             align="right"
-                            style={{ float: 'right', width: '50%' }}
+                            style={{ float: "right", width: "50%" }}
                           >
                             <b>
                               Received By
@@ -346,7 +347,7 @@ function PrintInvoice(props) {
                               <div className="col-sm-12">
                                 <img
                                   alt="company logo"
-                                  src="/uploads\farmroots logo.jpg"
+                                  src={farmrootsLogo}
                                   className="admin-print-company-logo"
                                 ></img>
                               </div>
@@ -368,9 +369,9 @@ function PrintInvoice(props) {
                           <div
                             className="col-sm-6"
                             style={{
-                              fontSize: '2.2rem',
-                              float: 'left',
-                              width: '50%',
+                              fontSize: "2.2rem",
+                              float: "left",
+                              width: "50%",
                             }}
                           >
                             <b>{`To Be Received: ${order.totalPrice}`}</b>
@@ -379,26 +380,26 @@ function PrintInvoice(props) {
                             className="col-sm-6"
                             align="right"
                             style={{
-                              fontSize: '2.2rem',
-                              float: 'right',
-                              width: '50%',
+                              fontSize: "2.2rem",
+                              float: "right",
+                              width: "50%",
                             }}
                           >
                             <b>{order.paymentMethod}</b>
                           </div>
                         </div>
                         <hr className="mari"></hr>
-                        <div style={{ marginTop: '1rem' }} className="row">
+                        <div style={{ marginTop: "1rem" }} className="row">
                           <div className="col-sm-6 p-2">
                             <div
                               class="rpsc"
-                              style={{ float: 'left', width: '45%' }}
+                              style={{ float: "left", width: "45%" }}
                             >
                               <div>Order Date: {order.createdAt}</div>
                               <div>Ship To:</div>
                               <div className="mt-3">{order.userName}</div>
                               <div className="mt-1">
-                                {' '}
+                                {" "}
                                 {order.shipping.mobileNumber != null ? (
                                   <>
                                     {`Phone#: ${order.userCountryCode} ${order.shipping.mobileNumber}`}
@@ -409,12 +410,12 @@ function PrintInvoice(props) {
                                   </>
                                 )}
                               </div>
-                              {order.shipping.landmark === '' ? (
+                              {order.shipping.landmark === "" ? (
                                 <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.area}`}</div>
                               ) : (
                                 <div className="mt-1 ">{`${order.shipping.houseNo}, ${order.shipping.roadNo}, ${order.shipping.landmark}, ${order.shipping.area}`}</div>
                               )}
-                              {order.shipping.postalCode === '' ? (
+                              {order.shipping.postalCode === "" ? (
                                 <div>{`${order.shipping.district}, ${order.shipping.division}`}</div>
                               ) : (
                                 <div>{`${order.shipping.district}, ${order.shipping.division}, ${order.shipping.postalCode}`}</div>
@@ -422,7 +423,7 @@ function PrintInvoice(props) {
                             </div>
                             <div
                               class="rpsc"
-                              style={{ float: 'right', width: '45%' }}
+                              style={{ float: "right", width: "45%" }}
                             >
                               <div align="right" className="">{` `}</div>
 
@@ -455,14 +456,14 @@ function PrintInvoice(props) {
                           </div> */}
                         <div className="row mt-4 mb-5">
                           <table
-                            style={{ fontSize: '1.2rem' }}
+                            style={{ fontSize: "1.2rem" }}
                             className="table table-bordered invoicetable  mt-4 mb-5"
                           >
                             <thead>
                               <tr className="">
                                 <th>SL</th>
                                 <th class="leftalign" scope="col">
-                                  Product Name{' '}
+                                  Product Name{" "}
                                 </th>
                                 <th>Size</th>
                                 <th>Qty</th>
@@ -526,7 +527,7 @@ function PrintInvoice(props) {
                         <div className="row my-4">
                           <div
                             className="col-sm-6 "
-                            style={{ float: 'left', width: '50%' }}
+                            style={{ float: "left", width: "50%" }}
                           >
                             <b>
                               Delivered By
@@ -536,7 +537,7 @@ function PrintInvoice(props) {
                           <div
                             className="col-sm-6 "
                             align="right"
-                            style={{ float: 'right', width: '50%' }}
+                            style={{ float: "right", width: "50%" }}
                           >
                             <b>
                               Received By
