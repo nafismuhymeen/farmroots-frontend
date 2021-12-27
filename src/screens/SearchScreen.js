@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { listSearchProducts } from '../actions/productActions';
-import Header from '../components/Header';
-import { Button, Container, Col, Row } from 'react-bootstrap';
-import { IoMdHeart } from 'react-icons/io';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { listSearchProducts } from "../actions/productActions";
+import Header from "../components/Header";
+import { Button, Container, Col, Row } from "react-bootstrap";
+import { IoMdHeart } from "react-icons/io";
 import {
   addToWishlist,
   deleteFromWishlist,
   listProductWishlist,
-} from '../actions/wishlistActions';
-import { addToCart } from '../actions/cartActions';
-import Rating from '../components/Rating';
-import Cart from '../components/Cart';
-import { FiChevronDown, FiChevronUp, FiX } from 'react-icons/fi';
-import { Icon } from '@iconify/react';
-import currencyBdt from '@iconify-icons/mdi/currency-bdt';
+} from "../actions/wishlistActions";
+import { addToCart } from "../actions/cartActions";
+import Rating from "../components/Rating";
+import Cart from "../components/Cart";
+import { FiChevronDown, FiChevronUp, FiX } from "react-icons/fi";
+import { Icon } from "@iconify/react";
+import currencyBdt from "@iconify-icons/mdi/currency-bdt";
 
 function SearchScreen(props) {
-  const [sortOrder, setSortOrder] = useState('');
+  const [sortOrder, setSortOrder] = useState("");
   const [sortDropdownVisible, setSortDropdownVisible] = useState(false);
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(0);
   const [rating, setRating] = useState(0);
   const [priceFilterCheck, setPriceFilterCheck] = useState(false);
 
-  const search = props.match.params.id ? props.match.params.id : '';
+  const search = props.match.params.id ? props.match.params.id : "";
 
   const productList = useSelector((state) => state.productList);
   const { products, loading, error } = productList;
@@ -89,23 +89,23 @@ function SearchScreen(props) {
   const handleBuyNow = (productId) => {
     dispatch(addToCart(productId, 1));
     setTimeout(() => {
-      props.history.push('/checkout');
+      props.history.push("/checkout");
     }, 1000);
   };
 
   const openCart = () => {
-    document.querySelector('.cart').classList.add('open');
+    document.querySelector(".cart").classList.add("open");
   };
 
   const openSortDropdown = () => {
-    document.querySelector('.search-sort-dropdown-list').classList.add('open');
+    document.querySelector(".search-sort-dropdown-list").classList.add("open");
     setSortDropdownVisible(true);
   };
 
   const closeSortDropdown = () => {
     document
-      .querySelector('.search-sort-dropdown-list')
-      .classList.remove('open');
+      .querySelector(".search-sort-dropdown-list")
+      .classList.remove("open");
     setSortDropdownVisible(false);
   };
 
@@ -228,23 +228,23 @@ function SearchScreen(props) {
                     >
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star-last"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       And Up
                     </Button>
@@ -254,23 +254,23 @@ function SearchScreen(props) {
                     >
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star-last"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       And Up
                     </Button>
@@ -280,23 +280,23 @@ function SearchScreen(props) {
                     >
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star-last"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       And Up
                     </Button>
@@ -306,23 +306,23 @@ function SearchScreen(props) {
                     >
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#ffc702' }}
+                        style={{ color: "#ffc702" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       <i
                         className="fa fa-star search-sidebar-rating-star-last"
-                        style={{ color: '#bbbbbb' }}
+                        style={{ color: "#bbbbbb" }}
                       ></i>
                       And Up
                     </Button>
@@ -345,7 +345,7 @@ function SearchScreen(props) {
                         <div className="search-sort-dropdown">
                           {sortDropdownVisible ? (
                             <>
-                              {sortOrder === '' && (
+                              {sortOrder === "" && (
                                 <Button
                                   onClick={closeSortDropdown}
                                   className="search-sort-dropdown-select"
@@ -353,46 +353,46 @@ function SearchScreen(props) {
                                   Latest <FiChevronUp></FiChevronUp>
                                 </Button>
                               )}
-                              {sortOrder === 'highestPrice' && (
+                              {sortOrder === "highestPrice" && (
                                 <Button
                                   onClick={closeSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Price: Highest First{' '}
+                                  Price: Highest First{" "}
                                   <FiChevronUp></FiChevronUp>
                                 </Button>
                               )}
-                              {sortOrder === 'lowestPrice' && (
+                              {sortOrder === "lowestPrice" && (
                                 <Button
                                   onClick={closeSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Price: Lowest First{' '}
+                                  Price: Lowest First{" "}
                                   <FiChevronUp></FiChevronUp>
                                 </Button>
                               )}
-                              {sortOrder === 'highestRating' && (
+                              {sortOrder === "highestRating" && (
                                 <Button
                                   onClick={closeSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Rating: Highest First{' '}
+                                  Rating: Highest First{" "}
                                   <FiChevronUp></FiChevronUp>
                                 </Button>
                               )}
-                              {sortOrder === 'lowestRating' && (
+                              {sortOrder === "lowestRating" && (
                                 <Button
                                   onClick={closeSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Rating: Lowest First{' '}
+                                  Rating: Lowest First{" "}
                                   <FiChevronUp></FiChevronUp>
                                 </Button>
                               )}
                             </>
                           ) : (
                             <>
-                              {sortOrder === '' && (
+                              {sortOrder === "" && (
                                 <Button
                                   onClick={openSortDropdown}
                                   className="search-sort-dropdown-select"
@@ -400,39 +400,39 @@ function SearchScreen(props) {
                                   Latest <FiChevronDown></FiChevronDown>
                                 </Button>
                               )}
-                              {sortOrder === 'highestPrice' && (
+                              {sortOrder === "highestPrice" && (
                                 <Button
                                   onClick={openSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Price: Highest First{' '}
+                                  Price: Highest First{" "}
                                   <FiChevronDown></FiChevronDown>
                                 </Button>
                               )}
-                              {sortOrder === 'lowestPrice' && (
+                              {sortOrder === "lowestPrice" && (
                                 <Button
                                   onClick={openSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Price: Lowest First{' '}
+                                  Price: Lowest First{" "}
                                   <FiChevronDown></FiChevronDown>
                                 </Button>
                               )}
-                              {sortOrder === 'highestRating' && (
+                              {sortOrder === "highestRating" && (
                                 <Button
                                   onClick={openSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Rating: Highest First{' '}
+                                  Rating: Highest First{" "}
                                   <FiChevronDown></FiChevronDown>
                                 </Button>
                               )}
-                              {sortOrder === 'lowestRating' && (
+                              {sortOrder === "lowestRating" && (
                                 <Button
                                   onClick={openSortDropdown}
                                   className="search-sort-dropdown-select"
                                 >
-                                  Rating: Lowest First{' '}
+                                  Rating: Lowest First{" "}
                                   <FiChevronDown></FiChevronDown>
                                 </Button>
                               )}
@@ -441,31 +441,31 @@ function SearchScreen(props) {
                           <div className="search-sort-dropdown-list">
                             <Button
                               className="search-sort-dropdown-list-button"
-                              onClick={() => sortHandler('')}
+                              onClick={() => sortHandler("")}
                             >
                               Latest
                             </Button>
                             <Button
                               className="search-sort-dropdown-list-button"
-                              onClick={() => sortHandler('highestPrice')}
+                              onClick={() => sortHandler("highestPrice")}
                             >
                               Price: Highest First
                             </Button>
                             <Button
                               className="search-sort-dropdown-list-button"
-                              onClick={() => sortHandler('lowestPrice')}
+                              onClick={() => sortHandler("lowestPrice")}
                             >
                               Price: Lowest First
                             </Button>
                             <Button
                               className="search-sort-dropdown-list-button"
-                              onClick={() => sortHandler('highestRating')}
+                              onClick={() => sortHandler("highestRating")}
                             >
                               Rating: Highest First
                             </Button>
                             <Button
                               className="search-sort-dropdown-list-button"
-                              onClick={() => sortHandler('lowestRating')}
+                              onClick={() => sortHandler("lowestRating")}
                             >
                               Rating: Lowest First
                             </Button>
@@ -479,25 +479,28 @@ function SearchScreen(props) {
                       <Col sm="3" xs="6" key={product.id}>
                         <div className="card">
                           <div
-                            style={{ position: 'relative' }}
+                            style={{ position: "relative" }}
                             className="search-product-image-div card-img"
                           >
                             <Link
                               className="imgContainer"
                               to={`/product/${product.category.replace(
-                                ' ',
-                                ''
-                              )}/${product.subCategory.replace(' ', '')}/${
+                                " ",
+                                ""
+                              )}/${product.subCategory.replace(" ", "")}/${
                                 product.id
                               }`}
                             >
                               <img
                                 className="search-product-image"
-                                src={product.image1}
+                                src={
+                                  process.env.REACT_APP_IMG_BASEURL +
+                                  product.image1
+                                }
                                 alt="Grocery Product"
                                 onError={(e) => {
                                   e.target.onerror = null;
-                                  e.target.src = '../default.jpg';
+                                  e.target.src = "../default.jpg";
                                 }}
                               />
                             </Link>
@@ -543,7 +546,7 @@ function SearchScreen(props) {
                             )}
                             {product.specialDeliveryOffer &&
                               product.specialDeliveryOffer.type ===
-                                'Free Delivery' &&
+                                "Free Delivery" &&
                               product.specialDeliveryOffer.value === 0 && (
                                 <div className="search-product-free-delivery">
                                   Free Delivery
@@ -552,7 +555,7 @@ function SearchScreen(props) {
                           </div>
                           <div className="search-product-content">
                             <div className="search-product-name">
-                              <Link to={'/grocery/product/' + product.id}>
+                              <Link to={"/grocery/product/" + product.id}>
                                 {product.name}
                               </Link>
                             </div>
@@ -579,7 +582,7 @@ function SearchScreen(props) {
                                   </div>
                                   <div
                                     className="d-flex align-items-center"
-                                    style={{ fontSize: '1.7rem' }}
+                                    style={{ fontSize: "1.7rem" }}
                                   >
                                     <Icon icon={currencyBdt} />
                                     <div className="textLinethrough">

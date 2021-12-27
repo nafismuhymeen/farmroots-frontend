@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
-import { MdClose } from 'react-icons/md';
-import { useDispatch, useSelector } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { saveAddress } from '../actions/addressActions';
-import { listDivision } from '../actions/orderDivisionActions';
-import { toast } from 'react-toastify';
-import { MESSAGES } from '../contants';
+import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import { MdClose } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { saveAddress } from "../actions/addressActions";
+import { listDivision } from "../actions/orderDivisionActions";
+import { toast } from "react-toastify";
+import { MESSAGES } from "../contants";
 
 function Address(props) {
-  const [houseNo, setHouseNo] = useState('');
-  const [roadNo, setRoadNo] = useState('');
-  const [landmark, setLandmark] = useState('');
-  const [zoneName, setZoneName] = useState('None');
+  const [houseNo, setHouseNo] = useState("");
+  const [roadNo, setRoadNo] = useState("");
+  const [landmark, setLandmark] = useState("");
+  const [zoneName, setZoneName] = useState("None");
   const [zoneNumber, setZoneNumber] = useState(0);
-  const [area, setArea] = useState('');
-  const [division, setDivision] = useState('');
-  const [district, setDistrict] = useState('');
-  const [postalCode, setPostalCode] = useState('');
-  const [type, setType] = useState('');
-  const [name, setName] = useState('');
-  const [mobileNumber, setMobileNumber] = useState('');
+  const [area, setArea] = useState("");
+  const [division, setDivision] = useState("");
+  const [district, setDistrict] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [type, setType] = useState("");
+  const [name, setName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
 
   const divisionList = useSelector((state) => state.divisionList);
   const { loading, divisions, error } = divisionList;
@@ -31,7 +31,7 @@ function Address(props) {
   const dispatch = useDispatch();
 
   const closeAddress = () => {
-    document.querySelector('.address-modal').classList.remove('open');
+    document.querySelector(".address-modal").classList.remove("open");
   };
 
   const addAddressHandler = (e) => {
@@ -53,21 +53,21 @@ function Address(props) {
         return area === d.area;
       });
       if (selectedArea.length < 1)
-        return toast.error('Please select area/thana');
+        return toast.error("Please select area/thana");
       let selectedDevision = divisions.filter((d) => {
         return division === d.name;
       });
       if (selectedDevision.length < 1)
-        return toast.error('Please select devision');
+        return toast.error("Please select devision");
       let selectedDistrict = divisions.filter((d) => {
         return district === d.district;
       });
       if (selectedDistrict.length < 1)
-        return toast.error('Please select district');
-      var editZoneName = zoneName || 'None';
+        return toast.error("Please select district");
+      var editZoneName = zoneName || "None";
       var editZoneNumber = zoneNumber || 0;
 
-      if (type === '') {
+      if (type === "") {
         dispatch(
           saveAddress({
             houseNo,
@@ -79,7 +79,7 @@ function Address(props) {
             district,
             division,
             postalCode,
-            type: 'ADDRESS',
+            type: "ADDRESS",
             name,
             mobileNumber,
           })
@@ -119,16 +119,16 @@ function Address(props) {
 
   useEffect(() => {
     dispatch(listDivision());
-    setHouseNo('');
-    setRoadNo('');
-    setArea('');
-    setDivision('');
-    setDistrict('');
-    setLandmark('');
-    setPostalCode('');
-    setName('');
-    setMobileNumber('');
-    setType('');
+    setHouseNo("");
+    setRoadNo("");
+    setArea("");
+    setDivision("");
+    setDistrict("");
+    setLandmark("");
+    setPostalCode("");
+    setName("");
+    setMobileNumber("");
+    setType("");
     return () => {
       //
     };
@@ -150,16 +150,16 @@ function Address(props) {
   };
 
   const openAreaDropdown = () => {
-    document.querySelector('.address-area-dropdown').classList.add('open');
+    document.querySelector(".address-area-dropdown").classList.add("open");
   };
 
   const closeAreaDropdown = () => {
-    document.querySelector('.address-area-dropdown').classList.remove('open');
+    document.querySelector(".address-area-dropdown").classList.remove("open");
   };
 
   const autoCompleteArea = (keyword) => {
     setArea(keyword);
-    if (keyword === '') {
+    if (keyword === "") {
       closeAreaDropdown();
     } else {
       openAreaDropdown();
@@ -189,18 +189,18 @@ function Address(props) {
   };
 
   const openDistrictDropdown = () => {
-    document.querySelector('.address-district-dropdown').classList.add('open');
+    document.querySelector(".address-district-dropdown").classList.add("open");
   };
 
   const closeDistrictDropdown = () => {
     document
-      .querySelector('.address-district-dropdown')
-      .classList.remove('open');
+      .querySelector(".address-district-dropdown")
+      .classList.remove("open");
   };
 
   const autoCompleteDistrict = (keyword) => {
     setDistrict(keyword);
-    if (keyword === '') {
+    if (keyword === "") {
       closeDistrictDropdown();
     } else {
       let distrintList = divisions.reduce((acc, val) => {
@@ -224,18 +224,18 @@ function Address(props) {
   };
 
   const openDivisionDropdown = () => {
-    document.querySelector('.address-division-dropdown').classList.add('open');
+    document.querySelector(".address-division-dropdown").classList.add("open");
   };
 
   const closeDivisionDropdown = () => {
     document
-      .querySelector('.address-division-dropdown')
-      .classList.remove('open');
+      .querySelector(".address-division-dropdown")
+      .classList.remove("open");
   };
 
   const autoCompleteDivision = (keyword) => {
     setDivision(keyword);
-    if (keyword === '') {
+    if (keyword === "") {
       closeDivisionDropdown();
     } else {
       let divisionList = divisions.reduce((acc, val) => {
@@ -263,8 +263,8 @@ function Address(props) {
         <div>{error.message}</div>
       ) : (
         <>
-          {' '}
-          <div className="address-modal">
+          {" "}
+          <div class="address-modal">
             <div className="address">
               <div className="d-flex justify-content-end">
                 <Button
@@ -287,7 +287,7 @@ function Address(props) {
                     name="name"
                     onChange={(e) => setName(e.target.value)}
                   ></input>
-                </div>{' '}
+                </div>{" "}
                 <div className="address-form-element">
                   <label className="address-form-label" htmlFor="houseNo">
                     Contact Number
@@ -309,17 +309,17 @@ function Address(props) {
                       }
                       if (
                         e.target.value.match(/^[1-9]\d*\.?\d*$/) ||
-                        telephone === ''
+                        telephone === ""
                       ) {
-                        telephone = telephone.replace(/\s/g, '');
+                        telephone = telephone.replace(/\s/g, "");
                         setMobileNumber(telephone);
                       }
                     }}
                   ></input>
-                </div>{' '}
+                </div>{" "}
                 <div className="address-form-element">
                   <label className="address-form-label" htmlFor="houseNo">
-                    House No / Flat No{' '}
+                    House No / Flat No{" "}
                     <span className="asterisk-mandatory">*</span>
                   </label>
                   <input
@@ -332,7 +332,7 @@ function Address(props) {
                 </div>
                 <div className="address-form-element">
                   <label className="address-form-label" htmlFor="roadNo">
-                    Road No / Road Name{' '}
+                    Road No / Road Name{" "}
                     <span className="asterisk-mandatory">*</span>
                   </label>
                   <input
@@ -460,7 +460,7 @@ function Address(props) {
                 </div>
                 <div className="address-form-element">
                   <label className="address-form-label" htmlFor="type">
-                    Save address as{' '}
+                    Save address as{" "}
                     <span className="asterisk-mandatory">*</span>
                   </label>
                   <input
@@ -473,7 +473,7 @@ function Address(props) {
                 </div>
                 <div
                   className="d-flex justify-content-center"
-                  style={{ width: '100%' }}
+                  style={{ width: "100%" }}
                 >
                   <Button type="submit" className="address-form-submit">
                     Submit

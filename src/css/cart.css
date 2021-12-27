@@ -7,7 +7,7 @@
   transition: all 0.7s;
   transform: translateX(37rem);
   background-color: #ffffff;
-  height: 59.2rem;
+  height: 46.2rem;
   width: 37rem;
   z-index: 10;
 }
@@ -48,7 +48,7 @@
   position: absolute;
   width: 100%;
   top: 13rem;
-  height: 33rem;
+  height: 20rem;
   overflow: auto;
 }
 
